@@ -55,6 +55,7 @@ let g:jedi#usages_command = "<leader>z"
 let g:jedi#popup_on_dot = 0
 let g:jedi#popup_select_first = 1
 let g:jedi#auto_close_doc = 1
+let g:jedi#rename_command = ""
 map <Leader>b Oimport ipdb; ipdb.set_trace() # BREAKPOINT<C-c>
 
 
@@ -157,6 +158,11 @@ inoremap <C-o> <C-O>:nohl<CR>
 
 " Quicksave command
 noremap <Leader>s :update<CR>
+
+
+" Quicksave command
+" TODO: Open a buffer window to display executable results
+noremap <Leader>r :update<CR>:!python %<CR><CR>
 
 
 " Quick quit command
