@@ -23,7 +23,7 @@ mkdir -p $olddir
 echo "Moving any existing dotfiles from ~ to $olddir"
 for file in $files; do
     if [ -e ~/.$file ]; then
-        mv ~/.$file ~/dotfiles_old
+        mv ~/.$file $olddir/.
     fi
 done
 
