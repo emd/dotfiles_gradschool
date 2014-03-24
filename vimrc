@@ -156,11 +156,11 @@ vnoremap <C-o> <C-C>:nohl<CR>
 inoremap <C-o> <C-O>:nohl<CR>
 
 
-" Quicksave command
+" Quick save command
 noremap <Leader>s :update<CR>
 
 
-" Quicksave command
+" Quick run command
 " TODO: Open a buffer window to display executable results
 noremap <Leader>r :update<CR>:!python %<CR><CR>
 
