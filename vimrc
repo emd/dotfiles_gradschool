@@ -49,6 +49,10 @@ set wildignore+=*_build/*
 set wildignore+=*/coverage/*
 
 
+" Efficient python folding
+Bundle 'Efficient-python-folding'
+
+
 " jedi-vim
 Bundle 'davidhalter/jedi-vim'
 let g:jedi#usages_command = "<leader>z"
