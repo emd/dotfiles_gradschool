@@ -21,14 +21,12 @@ files="vimrc"
 echo "Creating $olddir for backup of any existing dotfiles in \$HOME"
 mkdir -p $olddir
 
-echo "Moving any existing dotfiles from ~ to $olddir"
 for file in $files; do
     if [ -e ~/.$file ]; then
+        echo "Moving .$file from \$HOME to $olddir"
         mv ~/.$file $olddir/.
     fi
-done
 
-for file in $files; do
     echo "Creating a symlink to $file in \$HOME"
     ln -s $dir/$file ~/.$file
 done
