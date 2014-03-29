@@ -1,9 +1,10 @@
 #!/bin/bash
 
-######################################################
-# This script creates symlinks from the home directory
-# to any desired dotfiles in ~/dotfiles
-######################################################
+##############################################################
+# This script creates symlinks from dotfiles in $HOME/dotfiles
+# to $HOME. It also symlinks relevant vim-latex setting files
+# to the appropriate subdirectories of vim-latex package.
+##############################################################
 
 # dotfiles directory
 dir=~/dotfiles
@@ -11,10 +12,10 @@ dir=~/dotfiles
 # old dotfiles backup directory
 olddir=~/dotfiles_old
 
-# list of dot files/folders to symlink in ~
+# list of dot files/folders to symlink to $HOME
 # NOTE: Dots are *suppressed* and are manually prepended
 # in the linking commands below. This allows us to easily
-# list contents of dotifles w/o needing to use -a flag.
+# list contents of dotfiles w/o needing to use -a flag.
 files="vimrc"
 
 echo "Creating $olddir for backup of any existing dotfiles in \$HOME"
@@ -32,9 +33,9 @@ for file in $files; do
     ln -s $dir/$file ~/.$file
 done
 
+
 # Also, symlink files for vim-latex settings
 vim_latex=~/.vim/bundle/vim-latex
-
 
 # vim-latex settings
 #
