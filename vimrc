@@ -94,10 +94,6 @@ set grepprg=grep\ -nH\ $*
 " The following changes the default filetype back to 'tex':
 let g:tex_flavor = 'latex'
 
-" this is mostly a matter of taste. but LaTeX looks good with just a bit
-" of indentation.
-set sw=4
-
 "let g:Tex_CompileRule_pdf='pdflatex -synctex=1 -interaction=nonstopmode $*'
 let g:Tex_CompileRule_pdf = 'pdflatex -interaction=nonstopmode $*'
 let g:Tex_ViewRule_pdf = 'open -a Preview'
