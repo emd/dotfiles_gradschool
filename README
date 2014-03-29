@@ -1,3 +1,4 @@
 A collection of my dot files/directories for profile managment.
 
-Vim plugins are conveniently handled with Vundle.
+Vim plugins are conveniently handled with Vundle;
+vim-latex custom settings are also managed in this repo.
