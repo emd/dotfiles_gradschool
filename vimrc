@@ -233,3 +233,7 @@ set softtabstop=4
 set shiftwidth=4
 set shiftround
 set expandtab
+
+
+" Disable swap files - they trigger too many events
+set noswapfile
