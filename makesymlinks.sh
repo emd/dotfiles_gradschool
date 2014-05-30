@@ -16,7 +16,7 @@ olddir=~/dotfiles_old
 # NOTE: Dots are *suppressed* and are manually prepended
 # in the linking commands below. This allows us to easily
 # list contents of dotfiles w/o needing to use -a flag.
-files="vimrc"
+files=( "bash_profile" "vimrc" )
 
 echo "Creating $olddir for backup of any existing dotfiles in \$HOME"
 mkdir -p $olddir
