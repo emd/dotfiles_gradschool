@@ -96,3 +96,23 @@ then
     export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
 fi
 
+
+if [ $HOSTNAME == "venusa" ]
+then
+    # Set terminal type
+    export TERM=xterm-256color
+
+    # PATH
+    export PATH=/sw/link/bin:$PATH  # Path for ReviewPlus and EFITviewer
+
+    # Python information
+    export PYTHONPATH=$HOME/python:$HOME/python_modules
+    export PYTHONSTARTUP=$HOME/startup.py
+
+    # IDL information
+    export IDL_DIR=/usr/local/bin/idl           # Needed to make IDL work
+    export IDL_STARTUP=$HOME/.idl_startup.pro
+
+    # PCI MDSplus server path
+    export pci_path=hermit.gat.com::/trees/~pci
+fi
