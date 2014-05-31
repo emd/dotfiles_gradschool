@@ -1,13 +1,3 @@
-# Set PATH
-PATH=/usr/local/bin:$PATH  # Homebrew
-PATH=$HOME/bin:$PATH       # Vim
-export PATH
-
-
-# Python 2.7
-export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
-
-
 # User specific aliases
 alias ls='ls -F -G'
 alias ll='ls -lh'
@@ -93,3 +83,16 @@ function __prompt_command()
 }
 
 PROMPT_COMMAND=__prompt_command
+
+
+if [ $HOSTNAME == "evans-mbp" ]
+then
+    # Set PATH
+    PATH=/usr/local/bin:$PATH  # Homebrew
+    PATH=$HOME/bin:$PATH       # Vim
+    export PATH
+
+    # Python 2.7
+    export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
+fi
+
