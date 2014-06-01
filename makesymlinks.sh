@@ -16,19 +16,48 @@ olddir=~/dotfiles_old
 # NOTE: Dots are *suppressed* and are manually prepended
 # in the linking commands below. This allows us to easily
 # list contents of dotfiles w/o needing to use -a flag.
-files=( "bash_profile" "vimrc" )
+files="bash_profile vimrc"
 
 echo "Creating $olddir for backup of any existing dotfiles in \$HOME"
 mkdir -p $olddir
 
 for file in $files; do
-    if [ -e ~/.$file ]; then
-        echo "Moving .$file from \$HOME to $olddir"
-        mv ~/.$file $olddir/.
-    fi
+    # If on a NERSC system, user dotfiles must have a `.ext` appended.
+    if [ -e /usr/common/usg/bin/nersc_host ]; then
+        if [ $file == "bash_profile" ]; then
+            # Move existing dotfile to $olddir
+            if [ -e ~/.$file.ext ]; then
+                echo "Moving .$file.ext from \$HOME to $olddir"
+                mv ~/.$file.ext $olddir/.
+            fi
 
-    echo "Creating a symlink to $file in \$HOME"
-    ln -s $dir/$file ~/.$file
+            # Create symlink to new dotfile
+            echo "Creating a symlink to $file in \$HOME"
+            ln -s $dir/$file ~/.$file.ext
+        else
+            # Move existing dotfile to $olddir
+            if [ -e ~/.$file ]; then
+                echo "Moving .$file from \$HOME to $olddir"
+                mv ~/.$file $olddir/.
+            fi
+
+            # Create symlink to new dotfile
+            echo "Creating a symlink to $file in \$HOME"
+            ln -s $dir/$file ~/.$file
+        fi
+
+    # Handles dotfiles for all other systems
+    else
+        # Move existing dotfile to $olddir
+        if [ -e ~/.$file ]; then
+            echo "Moving .$file from \$HOME to $olddir"
+            mv ~/.$file $olddir/.
+        fi
+
+        # Create symlink to new dotfile
+        echo "Creating a symlink to $file in \$HOME"
+        ln -s $dir/$file ~/.$file
+    fi
 done
 
 
