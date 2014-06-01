@@ -125,6 +125,9 @@ if [ -e /usr/common/usg/bin/nersc_host ]
 then
     # Global NERSC settings
 
+    # NERSC specific aliases
+    alias ls='ls -F --color=auto'
+
     # Load relevant modules
     module load python
     module load netcdf4-python
