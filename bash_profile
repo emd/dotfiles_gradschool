@@ -1,5 +1,4 @@
 # User specific aliases
-alias ls='ls -F -G'
 alias ll='ls -lh'
 
 
@@ -88,6 +87,9 @@ PROMPT_COMMAND=__prompt_command
 # Personal Macbook
 if [ $HOSTNAME == "evans-mbp" ]
 then
+    # Aliases
+    alias ls='ls -F -G'
+
     # Set PATH
     PATH=/usr/local/bin:$PATH  # Homebrew
     PATH=$HOME/bin:$PATH       # Vim
@@ -101,6 +103,9 @@ fi
 # GA's Venus computer
 if [ $HOSTNAME == "venusa" ]
 then
+    # Venus specific aliases
+    alias ls='ls -F --color=auto'
+
     # Set terminal type
     export TERM=xterm-256color
 
