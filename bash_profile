@@ -85,6 +85,7 @@ function __prompt_command()
 PROMPT_COMMAND=__prompt_command
 
 
+# Personal Macbook
 if [ $HOSTNAME == "evans-mbp" ]
 then
     # Set PATH
@@ -97,6 +98,7 @@ then
 fi
 
 
+# GA's Venus computer
 if [ $HOSTNAME == "venusa" ]
 then
     # Set terminal type
@@ -115,4 +117,68 @@ then
 
     # PCI MDSplus server path
     export pci_path=hermit.gat.com::/trees/~pci
+fi
+
+
+# NERSC
+if [ -e /usr/common/usg/bin/nersc_host ]
+then
+    # Global NERSC settings
+
+    # Load relevant modules
+    module load python
+    module load netcdf4-python
+    module load gv
+
+    # Set relevant environmental variables
+    export SCRATCH=/scratch2/scratchdirs/emd
+    export PYTHONSTARTUP=$HOME/.config/ipython/profile_BOUT/startup/startup.py
+    export IDL_STARTUP=$HOME/.idl_startup.pro
+
+
+    # Host-specific NERSC settings
+
+    # First, determine the NERSC Host
+    export NERSC_HOST=`/usr/common/usg/bin/nersc_host`
+
+    # Hopper
+    if [ $NERSC_HOST == "hopper" ]
+    then
+        # BOUT++ home directory
+        export BOUT_TOP=$HOME/hopper/BOUT-dev   # Developemnt github repo
+        #export BOUT_TOP=$HOME/hopper/BOUT-2.0  # Release for 2013 conference
+        #export BOUT_TOP=$HOME/hopper/bout      # NERSC github repo
+
+        # Python
+        PYTHONPATH=$HOME/python_modules/hopper/lib/python:$PYTHONPATH
+        PYTHONPATH=$BOUT_TOP/tools/pylib:$PYTHONPATH
+        PYTHONPATH=$BOUT_TOP/tools/pylib/boutdata:$PYTHONPATH
+        PYTHONPATH=$BOUT_TOP/tools/pylib/boututils:$PYTHONPATH
+        PYTHONPATH=$BOUT_TOP/tools/pylib/post_bout:$PYTHONPATH
+        PYTHONPATH=$HOME/python:$PYTHONPATH
+        export PYTHONPATH
+
+        # IDL
+        export IDL_PATH=$BOUT_TOP/tools/idllib:$IDL_PATH
+    fi
+
+    # Edison
+    if [ $NERSC_HOST == "edison" ]
+    then
+        export BOUT_TOP=$HOME/edison/bout
+    fi
+
+    # Carver
+    if [ $NERSC_HOST == "carver" ]
+    then
+        # Swap pgi environment for gnu environment
+        module unload pgi openmpi
+        module load gcc openmpi-gcc  # use gnu verison < 4.7.1
+
+        # add other necessary modules for BOUT++
+        module load fftw/3.3.2-gnu
+        module load netcdf-gnu/4.1.1
+
+        export BOUT_TOP=$HOME/carver/bout
+    fi
 fi
