@@ -85,7 +85,7 @@ PROMPT_COMMAND=__prompt_command
 
 
 # Personal Macbook
-if [ $HOSTNAME == "evans-mbp" ]
+if [ $HOSTNAME == "evans-mbp" ] || [ $HOSTNAME == "mag-198-129-104-223.gat.com" ]
 then
     # Aliases
     alias ls='ls -F -G'
