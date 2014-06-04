@@ -110,7 +110,9 @@ then
     export TERM=xterm-256color
 
     # PATH
-    export PATH=/sw/link/bin:$PATH  # Path for ReviewPlus and EFITviewer
+    PATH=/sw/link/bin:$PATH            # Path for ReviewPlus and EFITviewer
+    PATH=/f/python/linux64/bin/:$PATH  # Path for Python
+    export PATH
 
     # Python information
     export PYTHONPATH=$HOME/python:$HOME/python_modules
