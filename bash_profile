@@ -96,7 +96,9 @@ then
     export PATH
 
     # Python 2.7
-    export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
+    PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
+    PYTHONPATH=$HOME/Dropbox/python:$PYTHONPATH
+    export PYTHONPATH
 fi
 
 
