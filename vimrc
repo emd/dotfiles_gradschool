@@ -6,30 +6,32 @@
 
 
 " mkdir -p ~/.vim/bundle
-" git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-set nocompatible
-filetype off " required!
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+" git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+set nocompatible                    " be iMproved, required
+filetype off                        " required!
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 
-" let Vundle manage Vundle
-Bundle 'gmarik/vundle'
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
 
 
 " wombat256 color scheme
-Bundle 'vim-scripts/wombat256.vim'
+Plugin 'vim-scripts/wombat256.vim'
 
 
 " Powerline
-Bundle 'Lokaltog/vim-powerline'
+Plugin 'Lokaltog/vim-powerline'
 set nocompatible
 set laststatus=2
 "let g:Powerline_symbols = 'fancy'
 
 
 " Syntastic
-Bundle 'scrooloose/syntastic'
+Plugin 'scrooloose/syntastic'
 " Also, need to ensure that the required syntax checker
 " (e.g. flake8) is installed
 " pip install flake8
@@ -37,12 +39,12 @@ let g:syntastic_always_populate_loc_list = 1
 
 
 " Supertab
-Bundle  'ervandew/supertab'
+Plugin 'ervandew/supertab'
 let g:SuperTabDefaultCompletionType = "context"
 
 
 " ctrlp
-Bundle 'kien/ctrlp.vim'
+Plugin 'kien/ctrlp.vim'
 let g:ctrlp_max_height = 30
 set wildignore+=*.pyc
 set wildignore+=*_build/*
@@ -50,11 +52,11 @@ set wildignore+=*/coverage/*
 
 
 " Efficient python folding
-Bundle 'Efficient-python-folding'
+Plugin 'Efficient-python-folding'
 
 
 " jedi-vim
-Bundle 'davidhalter/jedi-vim'
+Plugin 'davidhalter/jedi-vim'
 let g:jedi#usages_command = "<leader>z"
 let g:jedi#popup_on_dot = 0
 let g:jedi#popup_select_first = 1
@@ -82,7 +84,7 @@ inoremap <silent><C-k> <C-R>=OmniPopup('k')<CR>
 
 
 " vim-latex
-Bundle 'jcf/vim-latex'
+Plugin 'jcf/vim-latex'
 
 " IMPORTANT: grep will sometimes skip displaying the file name if you
 " search in a singe file. This will confuse Latex-Suite. Set your grep
@@ -112,7 +114,9 @@ imap <c-n> <Plug>IMAP_JumpForward
 nmap <c-n> <Plug>IMAP_JumpForward
 
 
-filetype plugin indent on " required!
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
 
 
 "============================================================================
