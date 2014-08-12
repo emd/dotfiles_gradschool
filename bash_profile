@@ -84,8 +84,8 @@ function __prompt_command()
 PROMPT_COMMAND=__prompt_command
 
 
-# Personal Macbook
-if [ $HOSTNAME == "evans-mbp" ] || [ $HOSTNAME == "mag-198-129-104-223.gat.com" ] || [ $HOSTNAME == "Administrators-MacBook-Pro.local" ] || [ $HOSTNAME == "adminisatorsmbp" ] || [ $HOSTNAME == "Evans-MacBook-Pro.local" ] || [ $HOSTNAME == "davise.gat.com" ]
+# Personal and Work Macbooks
+if [ $HOSTNAME == "emd_home" ] || [ $HOSTNAME == "emd_work" ]
 
 then
     # Aliases
