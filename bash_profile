@@ -92,7 +92,7 @@ then
     alias ls='ls -F -G'
 
     # Set PATH
-    PATH=/usr/local/bin:$PATH  # Homebrew
+    PATH=/usr/local/bin:/usr/local/sbin:$PATH  # Homebrew
     PATH=$HOME/bin:$PATH       # Vim
     export PATH
 
