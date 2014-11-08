@@ -16,7 +16,7 @@ olddir=~/dotfiles_old
 # NOTE: Dots are *suppressed* and are manually prepended
 # in the linking commands below. This allows us to easily
 # list contents of dotfiles w/o needing to use -a flag.
-files="bash_profile vimrc"
+files="bashrc bash_profile vimrc"
 
 echo "Creating $olddir for backup of any existing dotfiles in \$HOME"
 mkdir -p $olddir
@@ -24,7 +24,7 @@ mkdir -p $olddir
 for file in $files; do
     # If on a NERSC system, user dotfiles must have a `.ext` appended.
     if [ -e /usr/common/usg/bin/nersc_host ]; then
-        if [ $file == "bash_profile" ]; then
+        if [ $file == "bashrc" ] || [ $file == "bash_profile" ]; then
             # Move existing dotfile to $olddir
             if [ -e ~/.$file.ext ]; then
                 echo "Moving .$file.ext from \$HOME to $olddir"
