@@ -98,8 +98,8 @@ then
 
     # Python 2.7
     PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
-    PYTHONPATH=$HOME/Dropbox/python:$PYTHONPATH
-    PYTHONPATH=$HOME/Dropbox/d3d:$PYTHONPATH
+    PYTHONPATH=$HOME/Google\ Drive/python:$PYTHONPATH
+    PYTHONPATH=$HOME/Google\ Drive/d3d:$PYTHONPATH
     export PYTHONPATH
 fi
 
