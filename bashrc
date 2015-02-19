@@ -104,31 +104,31 @@ then
 fi
 
 
-# GA's Venus computer
-if [ $HOSTNAME == "venusa" ]
-then
-    # Venus specific aliases
-    alias ls='ls -F --color=auto'
-
-    # Set terminal type
-    export TERM=xterm-256color
-
-    # PATH
-    PATH=/sw/link/bin:$PATH            # Path for ReviewPlus and EFITviewer
-    PATH=/f/python/linux64/bin/:$PATH  # Path for Python
-    export PATH
-
-    # Python information
-    export PYTHONPATH=$HOME/python:$HOME/python_modules
-    export PYTHONSTARTUP=$HOME/startup.py
-
-    # IDL information
-    export IDL_DIR=/usr/local/bin/idl           # Needed to make IDL work
-    export IDL_STARTUP=$HOME/.idl_startup.pro
-
-    # PCI MDSplus server path
-    export pci_path=hermit.gat.com::/trees/~pci
-fi
+## GA's Venus computer
+#if [ $HOSTNAME == "venusa" ]
+#then
+#    # Venus specific aliases
+#    alias ls='ls -F --color=auto'
+#
+#    # Set terminal type
+#    export TERM=xterm-256color
+#
+#    # PATH
+#    PATH=/sw/link/bin:$PATH            # Path for ReviewPlus and EFITviewer
+#    PATH=/f/python/linux64/bin/:$PATH  # Path for Python
+#    export PATH
+#
+#    # Python information
+#    export PYTHONPATH=$HOME/python:$HOME/python_modules
+#    export PYTHONSTARTUP=$HOME/startup.py
+#
+#    # IDL information
+#    export IDL_DIR=/usr/local/bin/idl           # Needed to make IDL work
+#    export IDL_STARTUP=$HOME/.idl_startup.pro
+#
+#    # PCI MDSplus server path
+#    export pci_path=hermit.gat.com::/trees/~pci
+#fi
 
 
 # NERSC
