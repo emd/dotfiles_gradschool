@@ -73,7 +73,7 @@ if ($HOSTNAME == "venusa") then
     setenv TERM xterm-256color
 
     # Path
-    setenv PATH /task/imd/local64/bin:$PATH  # DIII-D Python installation
+    setenv PATH .:/task/imd/local64/bin:$PATH  # DIII-D Python installation
 
     # Python information
     setenv PYTHONPATH $HOME/python
