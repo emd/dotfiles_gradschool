@@ -57,6 +57,14 @@ function __prompt_command()
     PS1+="${Gray}\u:${Blue}\W${Color_Off}"
 
 
+    # Output virtualenv, if one is in use
+    local virtualenv=" [`workon`]"
+    if [[ "$virtualenv" ]]; then
+        # Loop evaluates if $virtualenv is nonempty
+        PS1+=${Cyan}$virtualenv${Color_Off}
+    fi
+
+
     # If in a git repo, output git status information
     local git_status="`git status -unormal 2>&1`"
     if ! [[ "$git_status" =~ Not\ a\ git\ repo ]]; then
