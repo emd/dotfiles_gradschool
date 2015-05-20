@@ -57,10 +57,9 @@ function __prompt_command()
     PS1+="${Gray}\u:${Blue}\W${Color_Off}"
 
 
-    # Output virtualenv, if one is in use
-    local virtualenv=" [`workon`]"
-    if [[ "$virtualenv" ]]; then
-        # Loop evaluates if $virtualenv is nonempty
+    # Output virtualenv, if one is in use (i.e. if $VIRTUAL_ENV is defined)
+    if [[ $VIRTUAL_ENV ]]; then
+        local virtualenv=" [`basename $VIRTUAL_ENV`]"
         PS1+=${Cyan}$virtualenv${Color_Off}
     fi
 
