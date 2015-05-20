@@ -99,8 +99,11 @@ then
     alias ls='ls -F -G'
 
     # Set PATH
-    PATH=/usr/local/bin:/usr/local/sbin:$PATH  # Homebrew
-    PATH=$HOME/bin:$PATH       # Vim
+    PATH=/usr/local/bin:/usr/local/sbin:$PATH           # Homebrew
+    PATH=$HOME/bin:$PATH                                # Vim
+    # gnu-sed installed with:
+    #       brew install gnu-sed --with-default-names
+    PATH=/usr/local/opt/gnu-sed/libexec/gnubin:$PATH    # gnu-sed
     export PATH
 
     # Python 2.7
