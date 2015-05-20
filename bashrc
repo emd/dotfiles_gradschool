@@ -101,6 +101,11 @@ then
     PYTHONPATH=$HOME/Google\ Drive/python:$PYTHONPATH
     PYTHONPATH=$HOME/Google\ Drive/d3d:$PYTHONPATH
     export PYTHONPATH
+
+    # virtualenv and virtualenvwrapper
+    export WORKON_HOME=$HOME/.virtualenvs
+    export PROJECT_HOME=$HOME/Google\ Drive/python/projects
+    source /usr/local/bin/virtualenvwrapper.sh
 fi
 
 
