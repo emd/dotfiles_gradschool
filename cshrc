@@ -78,6 +78,11 @@ if ($HOSTNAME == "venusa") then
     # Python information
     setenv PYTHONPATH $HOME/python
     setenv PYTHONSTARTUP $HOME/startup.py
+    # "v" is the simplest command on Venus to start a job on a worker node,
+    # providing load balancing between worker nodes and passing current
+    # environmental variables from the head node to the respective worker node
+    alias python "v '/task/imd/anaconda/bin/python'"
+    alias ipython "v '/task/imd/anaconda/bin/ipython --pylab'"
 
     # IDL information
     setenv IDL_STARTUP $HOME/idl_startup.pro
