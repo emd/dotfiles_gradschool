@@ -216,6 +216,12 @@ filetype plugin indent on
 syntax on
 
 
+" Spell checking
+set spelllang=en_us
+set spellfile=$HOME/Google\ Drive/vim/spell/en.utf-8.add
+set spell
+
+
 " Showing line numbers and length
 set number " show line numbers
 set ruler " show cursor line number (and %) and column number
