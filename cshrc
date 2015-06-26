@@ -72,17 +72,21 @@ if ($HOSTNAME == "venusa") then
     # Set terminal type
     setenv TERM xterm-256color
 
+    # MDSplus distributed client needs location of MDSplus trees
+    source /f/mdsplus/etc/envsyms.dist.csh
+
     # Path
     setenv PATH .:/task/imd/local64/bin:$PATH  # DIII-D Python installation
 
     # Python information
+    # ------------------
     setenv PYTHONPATH $HOME/python
     setenv PYTHONSTARTUP $HOME/startup.py
     # "v" is the simplest command on Venus to start a job on a worker node,
     # providing load balancing between worker nodes and passing current
     # environmental variables from the head node to the respective worker node
-    alias python "v '/task/imd/anaconda/bin/python'"
-    alias ipython "v '/task/imd/anaconda/bin/ipython --pylab'"
+    #alias python "v '/task/imd/anaconda/bin/python'"
+    #alias ipython "v '/task/imd/anaconda/bin/ipython --pylab'"
 
     # IDL information
     setenv IDL_STARTUP $HOME/idl_startup.pro
