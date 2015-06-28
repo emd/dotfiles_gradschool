@@ -160,6 +160,10 @@ vnoremap <C-o> <C-C>:nohl<CR>
 inoremap <C-o> <C-O>:nohl<CR>
 
 
+" Quickly exit insert mode
+inoremap jj <Esc>
+
+
 " Quick save command
 noremap <Leader>s :update<CR>
 
