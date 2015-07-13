@@ -51,8 +51,13 @@ set wildignore+=*_build/*
 set wildignore+=*/coverage/*
 
 
-" Efficient python folding
-Plugin 'Efficient-python-folding'
+" Efficient, simple python folding
+" Plugin 'Efficient-python-folding'
+Plugin 'tmhedberg/SimpylFold'
+let g:SimpylFold_docstring_preview = 0
+autocmd BufWinEnter *.py setlocal foldexpr=SimpylFold(v:lnum) foldmethod=expr
+autocmd BufWinLeave *.py setlocal foldexpr< foldmethod<
+nnoremap f za
 
 
 " jedi-vim
