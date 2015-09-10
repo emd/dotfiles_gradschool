@@ -158,13 +158,6 @@ set ignorecase
 set smartcase
 
 
-" Bind nohl
-" Removes highlight of your last search
-noremap <C-o> :nohl<CR>
-vnoremap <C-o> <C-C>:nohl<CR>
-inoremap <C-o> <C-O>:nohl<CR>
-
-
 " Quickly exit insert mode
 inoremap jj <Esc>
 
