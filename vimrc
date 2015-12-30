@@ -106,6 +106,7 @@ let g:Tex_CompileRule_pdf = 'pdflatex -interaction=nonstopmode $*'
 let g:Tex_ViewRule_pdf = 'open -a Preview'
 let g:Tex_DefaultTargetFormat = 'pdf'
 let g:Tex_MultipleCompileFormats = 'pdf'
+let g:Tex_GotoError = 0
 
 " m is the meta key; useful for e.g. adding items to a list in aTeX
 " Using OSX default terminal, ensure that "Use option as meta key"
@@ -156,13 +157,6 @@ set hlsearch
 set incsearch
 set ignorecase
 set smartcase
-
-
-" Bind nohl
-" Removes highlight of your last search
-noremap <C-o> :nohl<CR>
-vnoremap <C-o> <C-C>:nohl<CR>
-inoremap <C-o> <C-O>:nohl<CR>
 
 
 " Quickly exit insert mode
