@@ -173,8 +173,8 @@ noremap <Leader>r :update<CR>:!python %<CR><CR>
 
 
 " Quick quit command
-noremap <Leader>e :quit<CR> " Quit current window
-noremap <Leader>E :qa!<CR> " Quit all windows
+noremap <Leader>e :quit<CR>  " Quit current window
+noremap <Leader>E :quit!<CR> " Force quit current window
 
 
 " Easy movement between windows
