@@ -60,3 +60,4 @@ source /d/global/end.login
 
 # Source .cshrc (again!?) to ensure $PATH set as specified in .cshrc
 source .cshrc
+bash
