@@ -119,15 +119,24 @@ then
 fi
 
 
-## GA's Venus computer
-#if [ $HOSTNAME == "venusa" ]
-#then
-#    # Venus specific aliases
-#    alias ls='ls -F --color=auto'
-#
-#    # Set terminal type
-#    export TERM=xterm-256color
-#
+# GA's Venus computer
+if [ $HOSTNAME == "venusa" ]
+then
+    # Venus specific aliases
+    alias ls='ls -F --color=auto'
+
+    # Venus' Vim install allows one to paste but not to yank, while
+    # Venus' GVim install allows one yank but not to (easily) paste
+    # (for some reason, new lines are replaced with `^M`, making it
+    # very frustrating to paste more than a line or two...).
+    # Qilong Ren's Vim install allows one to both paste and yank,
+    # but the problems with pasting in GVim persist...
+    alias vim=/u/renq/bin/vim
+    alias gvim=/u/renq/bin/gvim
+
+    # Set terminal type
+    export TERM=xterm-256color
+
 #    # PATH
 #    PATH=/sw/link/bin:$PATH            # Path for ReviewPlus and EFITviewer
 #    PATH=/f/python/linux64/bin/:$PATH  # Path for Python
@@ -143,7 +152,7 @@ fi
 #
 #    # PCI MDSplus server path
 #    export pci_path=hermit.gat.com::/trees/~pci
-#fi
+fi
 
 
 # NERSC
