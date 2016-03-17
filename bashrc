@@ -150,8 +150,12 @@ then
 #    export IDL_DIR=/usr/local/bin/idl           # Needed to make IDL work
 #    export IDL_STARTUP=$HOME/.idl_startup.pro
 #
-#    # PCI MDSplus server path
-#    export pci_path=hermit.gat.com::/trees/~pci
+    # PCI MDSplus servers' tree-path definitions
+    # MDSplus will sequentially check each server (from left to right)
+    # until it finds the appropriate tree. Data is digitized and
+    # first available on mitpci, which is why it is listed first, but
+    # data is subsequently transferred to hermit for long(er)-term storage.
+    export pci_path='mitpci.gat.com::/trees/pci;hermit.gat.com::/trees/pci'
 fi
 
 
