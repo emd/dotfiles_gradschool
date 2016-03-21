@@ -143,6 +143,7 @@ then
 #    export PATH
 #
 #    # Python information
+     export MATPLOTLIBRC=$HOME
 #    export PYTHONPATH=$HOME/python:$HOME/python_modules
 #    export PYTHONSTARTUP=$HOME/startup.py
 #
