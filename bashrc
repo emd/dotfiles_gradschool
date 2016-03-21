@@ -137,20 +137,16 @@ then
     # Set terminal type
     export TERM=xterm-256color
 
-#    # PATH
-#    PATH=/sw/link/bin:$PATH            # Path for ReviewPlus and EFITviewer
-#    PATH=/f/python/linux64/bin/:$PATH  # Path for Python
-#    export PATH
-#
-#    # Python information
-     export MATPLOTLIBRC=$HOME
+    # Python information
+    alias python='v "/task/imd/anaconda/bin/python" -verbose'
+    alias ipython='v "/task/imd/anaconda/bin/ipython --pylab" -verbose'
+    export MATPLOTLIBRC=$HOME
 #    export PYTHONPATH=$HOME/python:$HOME/python_modules
 #    export PYTHONSTARTUP=$HOME/startup.py
-#
-#    # IDL information
-#    export IDL_DIR=/usr/local/bin/idl           # Needed to make IDL work
-#    export IDL_STARTUP=$HOME/.idl_startup.pro
-#
+
+    # IDL information
+    export IDL_STARTUP=$HOME/idl_startup.pro
+
     # PCI MDSplus servers' tree-path definitions
     # MDSplus will sequentially check each server (from left to right)
     # until it finds the appropriate tree. Data is digitized and
