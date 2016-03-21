@@ -16,7 +16,7 @@ olddir=~/dotfiles_old
 # NOTE: Dots are *suppressed* and are manually prepended
 # in the linking commands below. This allows us to easily
 # list contents of dotfiles w/o needing to use -a flag.
-files="bashrc bash_profile vimrc cshrc login matplotlibrc"
+files="bashrc bash_profile vimrc cshrc login"
 
 echo "Creating $olddir for backup of any existing dotfiles in \$HOME"
 mkdir -p $olddir
@@ -59,6 +59,22 @@ for file in $files; do
         ln -s $dir/$file ~/.$file
     fi
 done
+
+
+# Also, symlink files for matplotlibrc settings
+if [ -n "$MATPLOTLIBRC" ]; then
+    file=matplotlibrc
+
+    # Move existing dotfile to $olddir
+    if [ -e $MATPLOTLIBRC/$file ]; then
+        echo "Moving $file from \$MATPLOTLIBRC to $olddir"
+        mv $MATPLOTLIBRC/$file $olddir/.
+    fi
+
+    # Create symlink to new dotfile
+    echo "Creating a symlink to $file in \$MATPLOTLIBRC"
+    ln -s $dir/$file $MATPLOTLIBRC/$file
+fi
 
 
 # Also, symlink files for vim-latex settings
