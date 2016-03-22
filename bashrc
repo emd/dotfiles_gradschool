@@ -138,8 +138,15 @@ then
     export TERM=xterm-256color
 
     # Python information
+    # ------------------
+    # For heavy computation, run Python on Venus' computational nodes
     alias python='v "/task/imd/anaconda/bin/python" -verbose'
     alias ipython='v "/task/imd/anaconda/bin/ipython --pylab" -verbose'
+
+    # For small tasks, we can run Python on Venus' login nodes
+    alias pythonl=/task/imd/anaconda/bin/python
+    alias ipythonl="/task/imd/anaconda/bin/ipython --pylab"
+
     export MATPLOTLIBRC=$HOME
 #    export PYTHONPATH=$HOME/python:$HOME/python_modules
 #    export PYTHONSTARTUP=$HOME/startup.py
