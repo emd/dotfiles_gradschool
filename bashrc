@@ -147,6 +147,8 @@ then
     alias pythonl=/task/imd/anaconda/bin/python
     alias ipythonl="/task/imd/anaconda/bin/ipython --pylab"
 
+    alias nosetests=/task/imd/anaconda/bin/nosetests
+
     export MATPLOTLIBRC=$HOME
 #    export PYTHONPATH=$HOME/python:$HOME/python_modules
 #    export PYTHONSTARTUP=$HOME/startup.py
