@@ -131,8 +131,11 @@ then
     # very frustrating to paste more than a line or two...).
     # Qilong Ren's Vim install allows one to both paste and yank,
     # but the problems with pasting in GVim persist...
-    alias vim=/u/renq/bin/vim
-    alias gvim=/u/renq/bin/gvim
+    #
+    # This has *stopped* working via terminal, but still works
+    # through e.g. OMFIT... don't know why. Disabling for now
+    # alias vim=/u/renq/bin/vim
+    # alias gvim=/u/renq/bin/gvim
 
     # Set terminal type
     export TERM=xterm-256color
