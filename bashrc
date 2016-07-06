@@ -159,9 +159,13 @@ then
     # PCI MDSplus servers' tree-path definitions
     # MDSplus will sequentially check each server (from left to right)
     # until it finds the appropriate tree. Data is digitized and
-    # first available on mitpci, which is why it is listed first, but
-    # data is subsequently transferred to hermit for long(er)-term storage.
-    export pci_path='mitpci.gat.com::/trees/pci;hermit.gat.com::/trees/pci'
+    # first available on mitpci, but loading the digitizer with
+    # file I/O operations can apparently corrupt digitization.
+    # For this reason, particularly during DIII-D operations,
+    # it is always recommended to transfer the data to hermit
+    # and then load the data from there.
+    # export pci_path='mitpci.gat.com::/trees/pci;hermit.gat.com::/trees/pci'
+    export pci_path='hermit.gat.com::/trees/pci'
 fi
 
 
