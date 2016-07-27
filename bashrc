@@ -137,6 +137,10 @@ then
     # Set terminal type
     export TERM=xterm-256color
 
+    # My *modified* Python script for easy qrsh load-leveling on Venus;
+    # copied from `/sw/link/bin/v` and modified to allocate 4 GB of memory
+    alias v='$HOME/bin/v.py'
+
     # Python information
     # ------------------
     # For heavy computation, run Python on Venus' computational nodes
