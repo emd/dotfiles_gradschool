@@ -89,7 +89,7 @@ inoremap <silent><C-k> <C-R>=OmniPopup('k')<CR>
 
 
 " vim-latex
-Plugin 'jcf/vim-latex'
+Plugin 'vim-latex/vim-latex'
 
 " IMPORTANT: grep will sometimes skip displaying the file name if you
 " search in a singe file. This will confuse Latex-Suite. Set your grep
