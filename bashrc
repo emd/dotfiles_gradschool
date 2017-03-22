@@ -127,25 +127,15 @@ then
     # Set terminal type
     export TERM=xterm-256color
 
-    # Python information
-    # ------------------
-    module load python
-    alias python=/fusion/usc/opt/python/2.7.11/bin/python
-    alias nosetests=/fusion/usc/opt/python/2.7.11/bin/nosetests
+    module load defaults                          # CSS defaults
+    module load $HOME/privatemodules/mitpci
+    module load $HOME/privatemodules/random_data
 
+    alias python=$PYTHON
+    alias ipython="ipython --pylab"
     export MATPLOTLIBRC=$HOME
-
-    # PCI MDSplus servers' tree-path definitions
-    # MDSplus will sequentially check each server (from left to right)
-    # until it finds the appropriate tree. Data is digitized and
-    # first available on mitpci, but loading the digitizer with
-    # file I/O operations can apparently corrupt digitization.
-    # For this reason, particularly during DIII-D operations,
-    # it is always recommended to transfer the data to hermit
-    # and then load the data from there.
-    # export pci_path='mitpci.gat.com::/trees/pci;hermit.gat.com::/trees/pci'
-    export pci_path='hermit.gat.com::/trees/pci'
 fi
+
 
 # GA's Venus computer
 if [ $HOSTNAME == "venusa" ]
