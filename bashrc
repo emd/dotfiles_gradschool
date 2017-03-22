@@ -128,8 +128,8 @@ then
     export TERM=xterm-256color
 
     module load defaults                          # CSS defaults
-    module load $HOME/privatemodules/mitpci
-    module load $HOME/privatemodules/random_data
+    module load $HOME/modulefiles/mitpci
+    module load $HOME/modulefiles/random_data
 
     alias python=$PYTHON
     alias ipython="ipython --pylab"
