@@ -130,6 +130,7 @@ then
     module load defaults                            # CSS defaults
     module load $HOME/modulefiles/magnetics
     module load $HOME/modulefiles/distinct_colours
+    module load $HOME/modulefiles/bci
     module load $HOME/modulefiles/mitpci
     module load $HOME/modulefiles/random_data
 
