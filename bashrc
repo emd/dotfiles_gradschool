@@ -133,6 +133,7 @@ then
     module load $HOME/modulefiles/bci
     module load $HOME/modulefiles/mitpci
     module load $HOME/modulefiles/random_data
+    module load $HOME/modulefiles/fit_ellipse
 
     alias python=$PYTHON
     alias ipython="ipython --pylab"
