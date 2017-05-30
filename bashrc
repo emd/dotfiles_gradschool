@@ -138,6 +138,7 @@ then
 
     alias python=$PYTHON
     alias ipython="ipython --pylab"
+    alias nosetests="$(dirname $PYTHON)/nosetests"
     export MATPLOTLIBRC=$HOME
 fi
 
