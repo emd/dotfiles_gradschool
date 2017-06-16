@@ -128,13 +128,14 @@ then
     export TERM=xterm-256color
 
     module load defaults                            # CSS defaults
-    module load $HOME/modulefiles/magnetics
-    module load $HOME/modulefiles/distinct_colours
     module load $HOME/modulefiles/bci
+    module load $HOME/modulefiles/distinct_colours
+    module load $HOME/modulefiles/filters
+    module load $HOME/modulefiles/fit_ellipse
+    module load $HOME/modulefiles/gadata
+    module load $HOME/modulefiles/magnetics
     module load $HOME/modulefiles/mitpci
     module load $HOME/modulefiles/random_data
-    module load $HOME/modulefiles/fit_ellipse
-    module load $HOME/modulefiles/filters
 
     alias python=$PYTHON
     alias ipython="ipython --pylab"
