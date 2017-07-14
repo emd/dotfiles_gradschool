@@ -141,6 +141,8 @@ then
     alias ipython="ipython --pylab"
     alias nosetests="$(dirname $PYTHON)/nosetests"
     export MATPLOTLIBRC=$HOME
+
+    export IDL_STARTUP=$HOME/idl_startup.pro
 fi
 
 
