@@ -66,6 +66,15 @@ set Color_Off = "%{\033[0m%}"
 set prompt="${Gray}%n:${BBlue}%~${Color_Off} $ "
 
 
+# PPPL's sunfire cluster
+if ($HOSTNAME == "sunfire01.pppl.gov") then
+
+    # IDL information
+    setenv IDL_STARTUP $HOME/idl_startup.pro
+
+endif
+
+
 # GA's Venus computer
 if ($HOSTNAME == "venusa") then
 
