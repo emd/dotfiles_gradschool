@@ -70,6 +70,7 @@ set prompt="${Gray}%n:${BBlue}%~${Color_Off} $ "
 if ($HOSTNAME == "sunfire01.pppl.gov") then
 
     # IDL information
+    module load idl
     setenv IDL_STARTUP $HOME/idl_startup.pro
 
 endif
