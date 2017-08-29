@@ -63,7 +63,7 @@ set Color_Off = "%{\033[0m%}"
 # -----------------------------------------------------------------------------
 
 # Settling on this (lame) prompt for now...
-set prompt="${Gray}%n:${Blue}%~${Color_Off} $ "
+set prompt="${Gray}%n:${BBlue}%~${Color_Off} $ "
 
 
 # GA's Venus computer
