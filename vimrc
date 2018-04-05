@@ -103,8 +103,8 @@ let g:tex_flavor = 'latex'
 
 "let g:Tex_CompileRule_pdf='pdflatex -synctex=1 -interaction=nonstopmode $*'
 let g:Tex_CompileRule_pdf = 'pdflatex -interaction=nonstopmode $*'
-"let g:Tex_ViewRule_pdf = 'open -a Preview'
-let g:Tex_ViewRule_pdf = 'open -a /Applications/Adobe\ Acrobat\ Reader\ DC.app'
+let g:Tex_ViewRule_pdf = 'open -a Preview'
+"let g:Tex_ViewRule_pdf = 'open -a /Applications/Adobe\ Acrobat\ Reader\ DC.app'
 let g:Tex_DefaultTargetFormat = 'pdf'
 let g:Tex_MultipleCompileFormats = 'pdf'
 let g:Tex_GotoError = 0
